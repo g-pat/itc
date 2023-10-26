@@ -6,26 +6,42 @@
 	text-align: center;
 }
 /*style for topnav*/
-ul {
+ul.a {
 	list-style-type: none;
 	background-color: gray;
 	overflow: hidden;
 	padding: 0;
 }
-li {
+li.a {
 	float: left;
 }
 /*style for topnavlink*/
-li a, .nav {
+li.a a, .nav {
 	color: white;
 	text-align: center;
 	display:inline-block;
 	padding: 10px 45px;
 	text-decoration:none;
 }
-li a:hover, .dropdown:hover .nav{
+li.a a:hover, .dropdown:hover .nav{
 	background-color: black;
 	text-decoration: underline;
+}
+ul.b {
+	list-style-position: outside;
+}
+li.b{
+	float: none;
+}
+/*banner cty*/
+.banner {
+	width: 80%;
+	height: auto;
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
 }
 /*style for content*/
 .column {
@@ -44,10 +60,76 @@ li a:hover, .dropdown:hover .nav{
 	display: table;
 	clear: both;
 }
-/*responsive layout*/
-@media screen and (max-width: 600px) {
-	.column.both, .column.middle
-	{width: 100%}
+/* thông tin tuyển sinh du học */
+.gallery{
+	border: gray solid 1px;
+}
+.gallery:hover{
+	border: black solid 2px;
+}
+.gallery img{
+	width: 100%;
+	height: auto;
+}
+.gallery-content{
+	padding: 15px;
+	text-align: center;
+}
+.gallery-responsive{
+	padding: 0 5px;
+	float: left;
+	width: 24.9%;
+}
+@media only screen and (max-width: 700px)
+{
+	.gallery-responsive {
+		width: 49.9%;
+		margin: 5px 0;
+	}
+}
+@media only screen and (max-width: 500px)
+{
+	.gallery-responsive {
+		width: 100%;
+	}
+}
+/* thông tin tuyển dụng xuất khẩu lao động */
+/* hồ sơ thủ tục */
+.column_a {
+	padding: 10px;
+	margin: 5px;
+	margin-left: 50px;
+}
+.column_a.left{
+	background-color: aqua;
+	float: left;
+	width: 50%;
+	height: 500px;
+}
+.column_a.right{
+	background-color: aqua;
+	float: left;
+	width: 30%;
+	height: 500px;
+}
+/* inline hồ sơ thủ tục */
+.h0{
+	background-color: darkblue;
+	margin: 5px;
+	padding: 10px;
+	text-align: center;
+	color: white;
+	border: white solid 1px;
+}
+.div0{
+	list-style-position: inside;
+	background-color: white;
+	padding: 10px;
+	margin: 5px;
+	height: 400px;
+	line-height: 2;
+	color: black;
+	border: black solid 1px;	
 }
 /*style for footer*/
 .footer{
@@ -95,4 +177,9 @@ li.dropdown{
 }
 .dropdown:hover .dropdown-content {
 	display: block;
+}
+/*responsive layout*/
+@media screen and (max-width: 500px) {
+	.column.both, .column.middle
+	{width: 100%}
 }
